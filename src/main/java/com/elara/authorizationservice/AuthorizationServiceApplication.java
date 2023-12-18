@@ -55,8 +55,8 @@ public class AuthorizationServiceApplication extends SpringBootServletInitialize
 	@Override
 	public void run(String... args) throws Exception {
 
-		//SyncPermissionRequest syncPermissionRequest = permissionService.generatePermissionRequest(requestMappingHandlerMapping);
-		//permissionService.syncApplicationPermission(syncPermissionRequest);
+		SyncPermissionRequest syncPermissionRequest = permissionService.generatePermissionRequest(requestMappingHandlerMapping);
+		permissionService.syncApplicationPermission(syncPermissionRequest);
 		//System.out.println("SyncPermissionRequest: " + new Gson().toJson(syncPermissionRequest));
 		/*Map<String, String> keys = RSAUtil.generateKeyPair();
 		System.out.println("public-key: " + keys.get("public-key"));
